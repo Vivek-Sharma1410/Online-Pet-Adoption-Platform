@@ -19,7 +19,7 @@ public class DBHelper {
         return instance;
     }
 
-    public Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         Connection conn = DriverManager.getConnection(DB_URL);
         Statement stmt = conn.createStatement();
         stmt.execute("PRAGMA foreign_keys = ON;");
